@@ -7,13 +7,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "name_skill")
-public class NameAndSkill {
+@Table(name = "name_age")
+public class NameAndAge {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String name;
-	private String skill;
+	private String age;
 	public Long getId() {
 		return id;
 	}
@@ -26,10 +26,10 @@ public class NameAndSkill {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getSkill() {
-		return skill;
+	public String getAge() {
+		return age;
 	}
-	public void setSkill(String skill) {
-		this.skill = skill;
+	public void setAge(String age) {
+		this.age = age;
 	}
 }

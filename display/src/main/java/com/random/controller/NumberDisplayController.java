@@ -12,24 +12,25 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.random.entity.NameAndSkill;
+import com.random.entity.NameAndAge;
 import com.random.entity.NumberDisplay;
-import com.random.repository.NameAndSkillRepository;
+import com.random.repository.NameAndAgeRepository;
 import com.random.repository.NumberDisplayRepository;
 
 @RestController
+@RequestMapping("/homepage")
 public class NumberDisplayController {
 
 	@Autowired
 	NumberDisplayRepository numberDisplayRepository;
 
 	@Autowired
-	NameAndSkillRepository nameAndSkillRepository;
+	NameAndAgeRepository nameAndAgeRepository;
 
-	@RequestMapping("/showForm")
+	@RequestMapping("/registrationPage")
 	public ModelAndView showForm() {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("home");
+		mav.setViewName("RegistrationPage");
 		return mav;
 	}
 	
@@ -47,9 +48,9 @@ public class NumberDisplayController {
 		return numberDisplayRepository.save(numberDisplay);
 	}
 
-	@PostMapping("/addName")
-	public NameAndSkill addNameAndSkill(@RequestBody NameAndSkill nameAndSkill) {
-		return nameAndSkillRepository.save(nameAndSkill);
+	@PostMapping("/registration")
+	public NameAndAge addNameAndAge(@RequestBody NameAndAge nameAndAge) {
+		return nameAndAgeRepository.save(nameAndAge);
 	}
 
 
