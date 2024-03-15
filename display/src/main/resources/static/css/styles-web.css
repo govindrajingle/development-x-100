@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    background: wheat;
+    background: ghostwhite;
 }
 h1 {
 	text-align : center;
@@ -12,6 +12,17 @@ h1 {
 form input, form label {
     margin: 10px 200px;
     padding: 10px;
+    font-size: 30px;
+}
+
+#button{
+    margin: 10px 200px;
+    padding: 10px;
+    font-size: 30px;	
+}
+
+form input:hover {
+    background-color: mediumturquoise; /* Change this to the color you want */
 }
 
 form {

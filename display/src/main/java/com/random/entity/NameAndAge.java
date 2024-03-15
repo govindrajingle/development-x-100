@@ -1,5 +1,7 @@
 package com.random.entity;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,6 +16,7 @@ public class NameAndAge {
 	private Long id;
 	private String name;
 	private String age;
+	private LocalDateTime time;
 	public Long getId() {
 		return id;
 	}
@@ -31,5 +34,11 @@ public class NameAndAge {
 	}
 	public void setAge(String age) {
 		this.age = age;
+	}
+	public LocalDateTime getTime() {
+		return time;
+	}
+	public void setTime(LocalDateTime time) {
+		this.time = time;
 	}
 }
