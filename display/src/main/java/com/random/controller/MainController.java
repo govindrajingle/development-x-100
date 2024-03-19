@@ -30,7 +30,7 @@ import com.random.repository.NumberDisplayRepository;
 
 @RestController
 @RequestMapping("/homepage")
-public class NumberDisplayController {
+public class MainController {
 
 	@Autowired
 	NumberDisplayRepository numberDisplayRepository;
@@ -45,6 +45,7 @@ public class NumberDisplayController {
 		return mav;
 	}
 	
+//	@GetMapping("/showUsers")
 	@RequestMapping("/showUsers")
 	public List<NameAndAge> showUserDetails(){
 		List<NameAndAge> latestTen = nameAndAgeRepository.findByOrderByTimeDesc(PageRequest.of(0, 5));

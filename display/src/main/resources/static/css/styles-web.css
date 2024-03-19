@@ -1,33 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 body {
-    font-family: 'Raleway', sans-serif;
-    background: ghostwhite;
+	font-family: 'Raleway', sans-serif;
+	background: ghostwhite;
 }
+
 h1 {
-	text-align : center;
-    color: #333;
+	text-align: center;
+	color: #333;
 }
 
-form input, form label {
-    margin: 10px 200px;
-    padding: 10px;
-    font-size: 30px;
+form input,
+form label {
+	margin: 10px 200px;
+	padding: 10px;
+	font-size: 30px;
 }
 
-#button{
-    margin: 10px 200px;
-    padding: 10px;
-    font-size: 30px;	
+#button {
+	margin: 10px 200px;
+	padding: 10px;
+	font-size: 30px;
 }
 
 form input:hover {
-    background-color: mediumturquoise; /* Change this to the color you want */
+	background-color: mediumturquoise;
+	/* Change this to the color you want */
 }
 
 form {
-    text-align: center;
-    font-weight: bold;
-    margin: 20px;
-    padding: 20px;
+	text-align: center;
+	font-weight: bold;
+	margin: 20px;
+	padding: 20px;
+}
+
+td, th {
+	padding: 30px;
+	/* Adjust as needed */
+	margin: 10px;
+	/* Adjust as needed */
 }

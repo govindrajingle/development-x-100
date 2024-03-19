@@ -3,6 +3,7 @@
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="/css/styles-web.css">
@@ -20,29 +21,30 @@
     <input type="submit" value="Submit">
 </form>
 
-    <button id="button" onclick="showData()">Show Data</button>
-    
+    <button id="button" onClick="showData()">Show Data</button>
+
+<div id="dataDiv" class="m-3 p-3 border rounded bg-light">
+</div>
+
 <script type="text/javascript">
 
+//AJAX call to display values in table
 function showData(){
-	alert("button pressed");
-	   $.ajax({
-	       url: '/homepage/showUsers', // Corrected this line
-	       type: 'GET',
-	       success: function(response) {
-	           // Assuming the response is a list of 'NameAndAge' objects
-	           var table = "<table><tr><th>Name</th><th>Age</th></tr>";
-	           $.each(response, function(index, item) {
-	               table += "<tr><td>" + item.name + "</td><td>" + item.age + "</td></tr>";
-	           });
-	           table += "</table>";
-	           // Append the table to a div or replace existing table
-	           $('#dataDiv').html(table);
-	       },
-	       error: function(error) {
-	           console.log(error);
-	       }
-	   });
+    $.ajax({
+        url: 'showUsers',
+        type: 'GET',
+        success: function(response) {
+            var table = "<table><tr><th>ID</th><th>Name</th><th>Age</th><th>Time</th></tr>";
+            $.each(response, function(index, item) {
+                table += "<tr><td>" + item.id + "</td><td>" + item.name + "</td><td>" + item.age + "</td><td>" + item.time + "</td></tr>";
+            });
+            table += "</table>";
+            $('#dataDiv').html(table);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });	
 }
 
 //How to make request valid (Hash) 15-03-2024
