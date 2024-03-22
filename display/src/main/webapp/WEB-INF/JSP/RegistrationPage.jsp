@@ -28,7 +28,7 @@
 
 <script type="text/javascript">
 
-//AJAX call to display values in table
+//AJAX call to display values in table 19-03-2024
 function showData(){
     $.ajax({
         url: 'showUsers',
@@ -94,6 +94,7 @@ function submitForm(){
 	})
 	.catch(error => console.error('Error:', error));
 }); */
+
 </script>
 
 
